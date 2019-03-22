@@ -49,6 +49,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @likes = Like.where(user_id: @user)
     @microposts = Micropost.where(id: @likes).page(params[:page])
+    #@microposts = @lovings
   end
   
   private
